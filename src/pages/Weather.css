@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
+
+:root {
+  --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1.25em;
+}
+
+.clear {
+  clear: both;
+}
+
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #343d4b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: bold;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  background-image: url("https://image.freepik.com/free-vector/gorgeous-clouds-background-with-blue-sky-design_1017-25501.jpg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.weatherLogo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 20px;
+  border: none;
+  cursor: pointer;
+}
+.h2 {
+  color: rgb(218, 208, 122);
+  float: right;
+  font-size: 54px;
+  text-align: justify;
+  margin-top: 185px;
+  cursor: pointer;
+}
+.container {
+  border-radius: 25px;
+  -webkit-box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
+  color: #ffffff;
+  height: 400px;
+}
+
+.weather-side {
+  position: relative;
+  height: 100%;
+  border-radius: 25px 10px;
+  width: 300px;
+  -webkit-box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  -o-transition: transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+  -webkit-transform: translateZ(0) scale(1.02) perspective(1000px);
+  transform: translateZ(0) scale(1.02) perspective(1000px);
+  float: left;
+}
+
+.weather-side:hover {
+  -webkit-transform: scale(1.1) perspective(1500px) rotateY(10deg);
+  transform: scale(1.2) perspective(1500px) rotateY(10deg);
+}
+
+.weather-gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-image: var(--gradient);
+  border-radius: 25px;
+  opacity: 0.8;
+}
+
+.date-container {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.date-day {
+  display: block;
+}
+
+.location {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.location-icon {
+  display: inline-block;
+  height: 0.8em;
+  width: auto;
+  margin-right: 5px;
+}
+
+.weather-container {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+}
+
+.weather-icon.feather {
+  height: 60px;
+  width: auto;
+}
+
+.weather-temp {
+  margin: 0;
+  font-weight: 700;
+  font-size: 3em;
+}
+
+.weather-desc {
+  margin: 0;
+  text-transform: capitalize;
+}
+
+.info-side {
+  position: relative;
+  float: left;
+  height: 100%;
+  padding-top: 25px;
+  color: #383636;
+}
+
+.today-info {
+  padding: 15px;
+  margin: 0 25px 25px 25px;
+  /*  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25); */
+  border-radius: 10px;
+}
+
+.today-info > div:not(:last-child) {
+  margin: 0 0 10px 0;
+}
+
+.today-info > div .title {
+  float: left;
+  font-weight: 700;
+}
+
+.today-info > div .value {
+  float: right;
+}
+
+.week-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 35px;
+  -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+  border-radius: 25px 10px;
+  background: transparent;
+}
+
+.week-list > li {
+  padding: 15px;
+  cursor: pointer;
+  -webkit-transition: 200ms ease;
+  -o-transition: 200ms ease;
+  transition: 200ms ease;
+  border-radius: 10px;
+}
+
+.week-list > li:hover {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  background: #fff;
+  color: #222831;
+  -webkit-box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2);
+}
+.week-list :hover {
+  background: #fff;
+}
+
+.week-list > li.active {
+  color: #222831;
+  border-radius: 25px 10px;
+}
+
+.week-list > li .day-name {
+  display: block;
+  margin: 10px 0 0 0;
+  text-align: center;
+}
+
+.week-list > li .day-icon {
+  display: block;
+
+  width: auto;
+  margin: 0 auto;
+}
+
+.week-list > li .day-temp {
+  display: block;
+  text-align: center;
+  margin: 10px 0 0 0;
+  font-weight: 700;
+}
+
+.location-container {
+  padding: 25px 35px;
+  margin-top: 200px;
+}
+
+.location-button {
+  outline: none;
+  width: 15rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 25px 10px;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  color: #383636;
+  font-weight: 700;
+  -webkit-box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  -o-transition: transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+  float: left;
+  text-transform: capitalize;
+}
+
+.search-button {
+  margin-left: 5px;
+  -webkit-transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
+  width: auto;
+  float: left;
+  border: none transparent;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+  background-image: var(--gradient);
+  color: #ffffff;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px 10px;
+}
+
+.location-button .feather {
+  height: 1em;
+  width: auto;
+  margin-right: 5px;
+}
+.fav-button {
+  background: none;
+  border: none;
+  font-size: 28px;
+  float: right;
+  margin: 20px 20px 0px 0px;
+  color: white;
+}
